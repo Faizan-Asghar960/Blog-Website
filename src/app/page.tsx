@@ -1,15 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "./compnent/Navbar";
 
 export default function Home() {
   return (
     <div>
-   
       <Navbar />
       <div className="min-h-screen bg-gradient-to-br from-gray-800 to-gray-900 text-white flex items-center justify-center">
-        {/* Main Container */}   
+        {/* Main Container */}
         <div className="max-w-6xl mx-auto px-6">
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0">
@@ -38,10 +38,12 @@ export default function Home() {
 
             {/* Side Image */}
             <div className="lg:w-1/2 flex justify-center relative">
-              <img
+              <Image
                 src="/blog-home.jpg"
                 alt="Do Something Great"
-                className="rounded-lg shadow-xl w-6/4"
+                className="rounded-lg shadow-xl"
+                width={600} // Set an appropriate width
+                height={400} // Set an appropriate height
                 style={{ animation: "shadow-slide 2s infinite" }}
               />
             </div>

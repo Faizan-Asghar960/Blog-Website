@@ -1,37 +1,36 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 shadow-md">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left-aligned Logo */}
-        <div className="text-2xl font-bold text-white">
-          MFK USA Industry
-        </div>
+        <div className="text-2xl font-bold text-white">MFK USA Industry</div>
 
         {/* Navbar Links */}
         <ul className="flex space-x-6 text-lg text-white">
-        <li>
-            <a href="/" className="hover:text-blue-500 transition">
+          <li>
+            <Link href="/" className="hover:text-blue-500 transition">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/Blog" className="hover:text-blue-500 transition">
+            <Link href="/Blog" className="hover:text-blue-500 transition">
               Blog
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/About" className="hover:text-blue-500 transition">
+            <Link href="/About" className="hover:text-blue-500 transition">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/Contact" className="hover:text-blue-500 transition">
+            <Link href="/Contact" className="hover:text-blue-500 transition">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

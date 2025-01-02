@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Navbar from "../compnent/Navbar";
+import Image from "next/image";
 
 const blogs = [
-
   {
     id: 1,
     title: "Empire State Building",
     description:
-      "The Washington Monument, the Empire State Building, the Willis Tower—these buildings aren't just famous in America but recognized and beloved worldwide. Whether ",
+      "The Washington Monument, the Empire State Building, the Willis Tower—these buildings aren't just famous in America but recognized and beloved worldwide.",
     date: "2024-03-20",
     readTime: "5 min read",
     category: "USA Empire",
@@ -18,67 +18,67 @@ const blogs = [
     id: 2,
     title: "Washington Monument",
     description:
-      "The Washington Monument, the Empire State Building, the Willis Tower—these buildings aren't just famous in America but recognized and beloved worldwide. Whether ",
+      "The Washington Monument, the Empire State Building, the Willis Tower—these buildings aren't just famous in America but recognized and beloved worldwide.",
     date: "2024-03-19",
     readTime: "7 min read",
     category: "USA Washington Monument",
     image: "/explore2.jpg",
-    slug: "Washington-Monument",
+    slug: "washington-monument",
   },
   {
     id: 3,
     title: "Independence Hall",
     description:
-      "Independence Hall is a historic civic building in Philadelphia, where both the Declaration of Independence and the Constitution of the United States ",
+      "Independence Hall is a historic civic building in Philadelphia, where both the Declaration of Independence and the Constitution of the United States.",
     date: "2024-03-18",
     readTime: "6 min read",
     category: "Design",
     image: "/explore3.jpg",
-    slug: "Independence-Hall",
+    slug: "independence-hall",
   },
   {
     id: 4,
     title: "Walt Disney Concert Hall",
     description:
-      "The Walt Disney Concert Hall at 111 South Grand Avenue in downtown Los Angeles, California, is the fourth hall of the Los Angeles Music Center and was designed by Frank Gehry. ",
+      "The Walt Disney Concert Hall in downtown Los Angeles, California, is the fourth hall of the Los Angeles Music Center, designed by Frank Gehry.",
     date: "2024-03-18",
     readTime: "7.30 min read",
     category: "Design",
     image: "/explore4.jpg",
-    slug: "Walt-Disney-Concert-Hall",
+    slug: "walt-disney-concert-hall",
   },
   {
     id: 5,
     title: "JPMorgan Chase World Headquarters",
     description:
-      "Process 2020 under construction, 2023 complete, the 2025 total floor 60",
+      "Process started in 2020, expected to complete by 2025 with a total of 60 floors.",
     date: "2024-03-18",
     readTime: "5.45 min read",
     category: "Building",
     image: "/explore5.jpg",
-    slug: "JPMorgan-Chase-World-Headquarters",
+    slug: "jpmorgan-chase-world-headquarters",
   },
   {
     id: 6,
     title: "520 Fifth Avenue",
     description:
-      "Process 2020 under construction, 2024 expected to complete in 2026",
+      "Construction started in 2020, expected to complete by 2026.",
     date: "2024-03-18",
     readTime: "8 min read",
     category: "Unique Building",
     image: "/explore6.jpg",
-    slug: "520-Fifth-Avenue",
+    slug: "520-fifth-avenue",
   },
-  // Add more blogs here...
 ];
 
 export default function Blog() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-     <Navbar/>  <header className="text-center py-8">
+      <Navbar />
+      <header className="text-center py-8">
         <h1 className="text-4xl font-bold">Featured Articles</h1>
         <p className="text-gray-400">Explore our latest stories and insights</p>
-     </header>
+      </header>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {blogs.map((blog) => (
@@ -86,10 +86,12 @@ export default function Blog() {
             key={blog.id}
             className="bg-gray-800 rounded-lg overflow-hidden shadow-md transform hover:scale-105 hover:shadow-2xl hover:shadow-white transition-all duration-500"
           >
-            <img
+            <Image
               src={blog.image}
               alt={blog.title}
               className="w-full h-48 object-cover"
+              width={500}
+              height={300}
             />
             <div className="p-4">
               <span className="text-blue-400 text-sm">{blog.category}</span>
@@ -107,7 +109,7 @@ export default function Blog() {
             </div>
           </div>
         ))}
-      </div> 
+      </div>
     </div>
   );
 }
